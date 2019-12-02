@@ -33,7 +33,6 @@ class Pagination extends React.Component {
     const { data, initialized, paginationNumberButtons } = this.state;
     if (!fetchData) return <div> No fetchData function found!</div>;
     if (!initialized) return Loader ? <Loader /> : <div>Loading...</div>;
-    console.log(paginationNumberButtons)
     return (
       <>
         {data.map(d => <PaginationRow key={d.id} {...d} />)}
